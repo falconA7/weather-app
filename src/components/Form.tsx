@@ -3,10 +3,12 @@ import {useState} from "react"
 const Form = ()=> {
     const [city,setCity] = useState<string>("")
 
-    const getWeather = () => {
-        fetch("http://api.weatherapi.com/v1/current.json?key=6c1757eee273440f9c312124262004&q=London&aqi=no"
+    const getWeather = (e: any) => {
+        e.preventDefault()
+        fetch("http://api.weatherapi.com/v1/current.json?key=6c1757eee273440f9c312124262004&q=${city}&aqi=no"
         )
-            .then(res=>console.log(res) )
+            .then(res=> res.json() )
+            .then(data=>console.log(data))
     }
 
     return (
