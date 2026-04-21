@@ -1,3 +1,8 @@
+type FormProps= {
+    setCity
+    getWeather
+}
+
 const Form = (props:any)=> {
     return (
         <form >
