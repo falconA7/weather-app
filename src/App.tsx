@@ -15,7 +15,7 @@ const App =()=>{
 
   const [city,setCity] = useState<string>("")
 
-    const [result,setResult] = useState<ResultsState>({
+    const [results,setResults] = useState<ResultsState>({
         country:"",
         cityName:"",
         temperature:"",
@@ -28,7 +28,16 @@ const App =()=>{
           fetch(`http://api.weatherapi.com/v1/current.json?key=6c1757eee273440f9c312124262004&q=${city}&aqi=no`
           )
               .then(res=> res.json() )
-              .then(data=>console.log(data))
+              .then(data=>{
+                setResults({
+                  country: ,
+                  cityName: ,
+                  temperature: ,
+                  conditionText: ,
+                  icon: ,
+
+                })
+              })
       }
   
     return(
