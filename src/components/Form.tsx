@@ -1,9 +1,9 @@
 type FormProps= {
-    setCity
-    getWeather
+    setCity: React.Dispatch<React.SetStateAction<string>>
+    getWeather: (e: any) => void
 }
 
-const Form = (props:any)=> {
+const Form = (props:FormProps)=> {
     return (
         <form >
             <input type="text" 
