@@ -30,11 +30,11 @@ const App =()=>{
               .then(res=> res.json() )
               .then(data=>{
                 setResults({
-                  country: ,
-                  cityName: ,
-                  temperature: ,
-                  conditionText: ,
-                  icon: ,
+                  country:data.location.country,
+                  cityName:data.location.name,
+                  temperature:data.current.temp_c,
+                  conditionText:data.current.text,
+                  icon:data.current.icon,
 
                 })
               })
