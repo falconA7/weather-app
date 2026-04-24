@@ -3,9 +3,25 @@ import Title from "./components/Title"
 import Form from "./components/Form"
 import Results from "./components/Results"
 
+type ResultsState = {
+  country: string
+  cityName: string
+  temperature: string
+  conditionText: string
+  icon: string
+}
+
 const App =()=>{
 
   const [city,setCity] = useState<string>("")
+
+    const [result,setResult] = useState<ResultsState>({
+        country:"",
+        cityName:"",
+        temperature:"",
+        conditionText:"",
+        icon:""
+    })
   
       const getWeather = (e: any) => {
           e.preventDefault()
