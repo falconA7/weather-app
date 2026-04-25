@@ -1,6 +1,19 @@
-const Results =()=>{
+type ResultsProps = {
+  results:{
+    country: string
+    cityName: string
+    temperature: string
+    conditionText: string
+    icon: string
+   }
+}
+const Results =(props:ResultsProps)=>{
     return(
-        <h1>気象データ</h1>
+       <div>
+
+        {props.results.country && 
+        <div>{props.results.country}</div>}
+       </div>
     )
 }
 

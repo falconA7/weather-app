@@ -44,7 +44,7 @@ const App =()=>{
       <div>
         <Title/>
         <Form setCity={setCity} getWeather={getWeather}/>
-        <Results/>
+        <Results results={results}/>
       </div>
     )
 }
