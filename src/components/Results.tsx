@@ -20,7 +20,7 @@ const Results =(props:ResultsProps)=>{
         {props.results.conditionText &&
             <div>
              <img src={props.results.icon} alt="icon"></img>
-             <span>{props.results.conditionText}</span> 
+             <span>{props.results.conditionText}</span>
             </div>
         }
        </div>

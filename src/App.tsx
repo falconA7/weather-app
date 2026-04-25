@@ -33,8 +33,8 @@ const App =()=>{
                   country:data.location.country,
                   cityName:data.location.name,
                   temperature:data.current.temp_c,
-                  conditionText:data.current.text,
-                  icon:data.current.icon,
+                  conditionText:data.current.condition.text,
+                  icon:data.current.condition.icon,
 
                 })
               })
