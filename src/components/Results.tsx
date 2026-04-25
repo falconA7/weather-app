@@ -19,7 +19,7 @@ const Results =(props:ResultsProps)=>{
             <div>{props.results.temperature}<span>℃</span></div>}
         {props.results.conditionText &&
             <div>
-             <img src={props.results.icon} alt="icon">
+             <img src={props.results.icon} alt="icon"></img>
              <span>{props.results.conditionText}</span> 
             </div>
         }
