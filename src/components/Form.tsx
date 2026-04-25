@@ -1,6 +1,6 @@
 type FormProps= {
     setCity: React.Dispatch<React.SetStateAction<string>>
-    getWeather: (e: any) => void
+    getWeather: (e: React.SubmitEvent<HTMLFormElement>) => void
 }
 
 const Form = (props:FormProps)=> {
