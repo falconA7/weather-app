@@ -16,6 +16,27 @@ body{
 
 }
 
-button {
+/*form.tsx*/
+.form{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:200px;
+    border-color:black;
+    margin:40px;
+}
+
+.form-button {
+    border:solid;
+
+}
+
+
+/*title.tsx*/
+.title{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100px;
 
 }

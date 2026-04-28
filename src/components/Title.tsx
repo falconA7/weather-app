@@ -1,6 +1,6 @@
 const Title =()=>{
     return(
-        <h1>React World Weather</h1>
+        <h1 className="title">React World Weather</h1>
     )
 }
 
