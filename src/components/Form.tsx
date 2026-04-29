@@ -18,7 +18,7 @@ const Form = (props:FormProps)=> {
             <button className="form-button" type="submit" onClick={props.getWeather}>
                 Get Weather
             </button>
-            
+
         </form>
     )
 }
