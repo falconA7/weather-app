@@ -2,6 +2,7 @@ import {useState} from "react"
 import Title from "./components/Title"
 import Form from "./components/Form"
 import Results from "./components/Results"
+import Favorites from "./components/Favorites"
 
 type ResultsState = {
   country: string
@@ -45,6 +46,7 @@ const App =()=>{
         <Title/>
         <Form setCity={setCity} getWeather={getWeather}/>
         <Results results={results}/>
+        <Favorites/>
       </div>
     )
 }
