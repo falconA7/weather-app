@@ -37,6 +37,8 @@ body{
 
 }
 
+/*Results.tsx*/
+
 .results{
    display:flex;
    flex-direction:column;
@@ -44,4 +46,11 @@ body{
    align-items:center;
    height:40px;
 
+}
+
+
+/*Favorites.tsx*/
+.favorites{
+    display:flex;
+    
 }
