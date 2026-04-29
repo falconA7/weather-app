@@ -51,6 +51,9 @@ body{
 
 /*Favorites.tsx*/
 .favorites{
-    display:flex;
-    
+    width:100px;
+    padding:20px;
+    border:solid black;
+
+
 }
