@@ -1,5 +1,6 @@
 html{
     font-size:62.5%;
+    box-sizing:border-box;
 }
 
 body{
@@ -26,13 +27,19 @@ body{
     justify-content:center;
     align-items:center;
     height:100px;
-    border-color:black;
     margin:20px;
+}
+
+.form-input{
+    height:20px;
+    border-radius: 60px;
+
 }
 
 .form-button {
     border:solid;
-
+    border-radius: 60px;
+    
 }
 
 
