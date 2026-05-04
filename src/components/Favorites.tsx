@@ -1,8 +1,7 @@
-type{
-
+type FavoritesProps ={
+    
 }
-
-const Favorites = (props:favoritesProps)=>{
+const Favorites = (props:FavoritesProps)=>{
     return(
         <div className="favorites">
             <h2>Favorite palaces</h2>
