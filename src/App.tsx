@@ -46,7 +46,7 @@ const App =()=>{
         <Title/>
         <Form setCity={setCity} getWeather={getWeather}/>
         <Results results={results}/>
-        <Favorites/>
+        <Favorites setCity={setCity} getWeather={getWeather}/>
       </div>
     )
 }

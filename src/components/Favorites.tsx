@@ -1,5 +1,6 @@
 type FavoritesProps ={
-    
+    setCity:()
+    getWeather:(e: React.SubmitEvent<HTMLFormElement>) => void
 }
 const Favorites = (props:FavoritesProps)=>{
     return(
