@@ -26,7 +26,8 @@ const App =()=>{
   
       const getWeather = (e: React.SubmitEvent<HTMLFormElement>) => {
           e.preventDefault()
-          fetch(`http://api.weatherapi.com/v1/current.json?key=6c1757eee273440f9c312124262004&q=${city}&aqi=no`
+          const apiKey = import.meta.env.VITE_WEATHER_API_KEY
+          fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
           )
               .then(res=> res.json() )
               .then(data=>{
