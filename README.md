@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# React World Weather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple weather lookup app built with **React 19**, **TypeScript**, and **Vite**.
+Search by city name to see the current temperature and conditions, powered by the [OpenWeatherMap API](https://openweathermap.org/api).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Search current weather by city name
+- Displays country, city, temperature (°C), condition, and a weather icon
+- Quick-access favorite cities (London, Tokyo, New York)
+- Built with strict TypeScript types and a component-based structure
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- TypeScript
+- Vite
+- [lucide-react](https://lucide.dev/) (icons)
+- OpenWeatherMap API
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── App.tsx               # Root component, holds state and fetch logic
+├── main.tsx              # Entry point
+├── index.css             # Global styles (BEM-style class names)
+└── components/
+    ├── Title.tsx         # App heading
+    ├── Form.tsx          # City input form
+    ├── Results.tsx       # Weather result display
+    └── Favorites.tsx     # Favorite city shortcut buttons
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 20.19+ or 22.12+
+- An OpenWeatherMap API key ([sign up here](https://home.openweathermap.org/users/sign_up))
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd weather-app
+
+# Install dependencies
+npm install
 ```
+
+### Environment Variables
+
+Create a `.env` file in the project root based on `.env_example`:
+
+```
+VITE_WEATHER_API_KEY=your_api_key_here
+```
+
+> Note: Vite requires environment variables exposed to the client to be prefixed with `VITE_`.
+
+### Run the App
+
+```bash
+# Start the dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview the production build
+npm run preview
+
+# Lint
+npm run lint
+```
+
+## How It Works
+
+1. The user enters a city name in the form (or clicks a favorite button).
+2. `App.tsx` calls the OpenWeatherMap API using the `VITE_WEATHER_API_KEY`.
+3. The response is stored in state and rendered by the `Results` component.
+
+## License
+
+This project is for learning purposes.
