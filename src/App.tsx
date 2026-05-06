@@ -30,18 +30,17 @@ const App =()=>{
           console.log('apiKey:',apiKey)
           console.log('apiKeyの型:', typeof apiKey)
           console.log('apiKeyの長さ:', apiKey?.length)
-          fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
+          fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
           )
               .then(res=> res.json() )
               .then(data=>{
                 setResults({
-                  country:data.location.country,
-                  cityName:data.location.name,
-                  temperature:data.current.temp_c,
-                  conditionText:data.current.condition.text,
-                  icon:data.current.condition.icon,
-
-                })
+                  country: data.sys.country,           
+                  cityName: data.name,                 
+                  temperature: data.main.temp,          
+                  conditionText: data.weather[0].description,  
+                  icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+                   })
               })
       }
   
