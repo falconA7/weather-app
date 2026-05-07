@@ -6,9 +6,11 @@ const Favorites = (props:FavoritesProps)=>{
         <div className="favorites">
             <h2>Favorite palaces</h2>
             <div>
-                <button onClick={props.getWeather}>London</button>
-                <button onClick={props.getWeather}>Tokyo</button>
-                <button onClick={props.getWeather}>NEW-YORK</button>
+                <form action="">
+                    <button onClick={props.getWeather}>London</button>
+                    <button onClick={props.getWeather}>Tokyo</button>
+                    <button onClick={props.getWeather}>NEW-YORK</button>
+                </form>
             </div>
         </div>
     )

@@ -26,11 +26,13 @@ const App =()=>{
   
       const getWeather = (e: React.SubmitEvent<HTMLFormElement>) => {
           e.preventDefault()
-          const apiKey = import.meta.env.VITE_
+          const apiKey = import.meta.env.VITE_WEATHER_API_KEY
           fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
           )
               .then(res=> res.json() )
               .then(data=>{
+                console.log('Apiレスポンス', data)
+                console.log('apiKeyの長さ:', apiKey?.length)
                 setResults({
                   country: data.sys.country,           
                   cityName: data.name,                 
