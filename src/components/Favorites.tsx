@@ -1,5 +1,5 @@
 type FavoritesProps ={
-    
+    getWeather:any
 }
 const Favorites = (props:FavoritesProps)=>{
     return(

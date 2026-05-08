@@ -24,16 +24,16 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100px;
+    height:30px;
     width:400px;
-    margin:20px;
+     margin:0px 300px 0px;
     border:solid black;
     border-radius:60px;
 }
 
 
 /*.form-input{
-    height:20px;
+    height:10px;
     border-radius: 60px;
 
 }
@@ -53,8 +53,9 @@ body{
    flex-direction:column;
    justify-content:center;
    align-items:center;
-   height:160px;
+   height:300px;
    width:60%;
+   margin:0px 250px 0px;
 
 }
 
