@@ -24,8 +24,7 @@ const App =()=>{
         icon:""
     })
   
-      const getWeather = (e: React.SubmitEvent<HTMLFormElement>) => {
-          e.preventDefault()
+      const fetchWeather = (cityName:string) => {
           const apiKey = import.meta.env.VITE_WEATHER_API_KEY
           fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
           )
@@ -42,13 +41,22 @@ const App =()=>{
                    })
               })
       }
+
+      const getWeather = (e:React.SubmitEvent<HTMLFormElement>) =>{
+        e.preventDefault()
+        fetchWeather(city)
+      }
+
+      const getWeatherByCity = (cityName:string)=> {
+        fetchWeather(cityName)
+      }
   
     return(
       <div>
         <Title/>
         <Form setCity={setCity} getWeather={getWeather}/>
         <Results results={results}/>
-        <Favorites setCity={setCity} getWeather={getWeather}/>
+        <Favorites getWeatherByCity={getWeatherByCity}/>
       </div>
     )
 }
