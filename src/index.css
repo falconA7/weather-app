@@ -34,7 +34,7 @@ body{
 .form-input{
     height:20px;
     width:400px;
-    border-radius: 60px;
+    border-radius: 60px 0px 0px 60px;
     color:none;
     
 
@@ -42,7 +42,7 @@ body{
 
 .form-button {
     border:solid;
-    border-radius: 60px;
+    border-radius: 0px 60px 60px 0px;
     
 }*/
 
