@@ -27,15 +27,15 @@ body{
     height:30px;
     width:400px;
     margin:20px auto;
-    border:solid black;
-    border-radius:60px;
+    
 }
 
 
 .form-input{
-    height:10px;
+    height:20px;
     width:400px;
     border-radius: 60px;
+    color:none;
     
 
 }
