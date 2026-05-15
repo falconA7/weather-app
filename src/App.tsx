@@ -54,9 +54,9 @@ const App =()=>{
     return(
       <div>
         <Title/>
+        <Favorites getWeatherByCity={getWeatherByCity}/>
         <Form setCity={setCity} getWeather={getWeather}/>
         <Results results={results}/>
-        <Favorites getWeatherByCity={getWeatherByCity}/>
       </div>
     )
 }

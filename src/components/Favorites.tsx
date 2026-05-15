@@ -3,14 +3,14 @@ type FavoritesProps ={
 }
 const Favorites = (props:FavoritesProps)=>{
     return(
-        <div className="favorites">
+        <span className="favorites">
             <h2>Favorite places</h2>
-            <div>
+            <span>
                     <button onClick={()=>props.getWeatherByCity("London")}>London</button>
                     <button onClick={()=>props.getWeatherByCity("Tokyo")}>Tokyo</button>
                     <button onClick={()=>props.getWeatherByCity("New York")}>NEW-YORK</button>
-            </div>
-        </div>
+            </span>
+        </span>
     )
 }
 
